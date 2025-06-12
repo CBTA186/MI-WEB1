@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBTA186 - Proyectos Productivos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  
+  <header class="encabezado">
+  <div class="contenido-header">
+    <img src="images/banner.webp" alt="banner" class="banner" />
+  </div>
+</header>
+
+ 
+  <nav>
+   <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li>
+        <a href="#">Hortalizas</a>
+        <ul class="submenu">
+          <li><a href="pepino.html">Pepino</a></li>
+          <li><a href="calabaza.html">Calabaza</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Productos</a>
+        <ul class="submenu">
+          <li><a href="lacteos.html">Lácteos</a></li>
+          <li><a href="carnicos.html">Cárnicos</a></li>
+          <li><a href="Hortofruticolas.html">Hortofrutícolas</a></li>
+        </ul>
+      </li>
+      <li><a href="sandia.html">Cultivo sandía</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="aves.html">Aves de engorda.</a></li>
+    </ul>
+  </nav>
+
+  
+  <main class="contenido">
+    <h2 class="descripcion">Aves de engorda </h2>
+   <div class="slider-container">
+  <button class="slider-btn prev" onclick="moverSlider(-1)">&#10094;</button>
+  <div class="slider">
+    <img src="images/engorda1.webp" alt="Imagen 1" alt="1" class="slide active"  width="600" y height="260">
+    <img src="images/pollitos.webp" alt="Imagen 2 " alt="2" class="slide"  width="600" y height="260">
+  
+  </div>
+  <button class="slider-btn next" onclick="moverSlider(1)">&#10095;</button>
+</div>
+  <p>En esta foto se puede observar que estan limpiando y acondicionado  el area de los pollitos para que tengan un espacio limpio, ordenado y para mejor comodidad  de ellas y para tengan un buen crecimiento, una buena alimentación.</p>
+  
+
+
+   <div class="slider-container">
+  <button class="slider-btn prev" onclick="moverSlider(-1)">&#10094;</button>
+  <div class="slider">
+    <img src="images/ave de engorda2.webp" alt="Imagen 4" alt="4" class="slide active"  width="600" y height="260">
+    <img src="images/ave de engorda3.webp" alt="Imagen 5 " alt="5" class="slide"  width="600" y height="260">
+    <img src="images/ave de engorda4.webp" alt="Imagen 6 " alt="6" class="slide"  width="600" y height="260">
+  </div>
+  <button class="slider-btn next" onclick="moverSlider(1)">&#10095;</button>
+</div>
+  <p>Acá esta la instalación de la luz, de los comederos de los pollos para que tengan un buena comodidad para los pollos e igual está el aserrín para que no tengan frio y  le ponen capas de tierral para que no se machen con su excremento.</p>
+  
+
+
+   <div class="slider-container">
+  <button class="slider-btn prev" onclick="moverSlider(-1)">&#10094;</button>
+  <div class="slider">
+    <img src="images/ave de engorda4.webp" alt="Imagen 7" class="slide active"  width="600" y height="260">
+    <img src="images/pollitos.webp" alt="Imagen 8 " class="slide"  width="600" y height="260">
+    <img src="images/banner 2.webp" alt="Imagen 9 " class="slide"  width="600" y height="260">
+  </div>
+  <button class="slider-btn next" onclick="moverSlider(1)">&#10095;</button>
+</div>
+  <p>La crianza y el cuidado de los pollos como se puede observar se comienza con la crianza para engordar a los pollos, de igual manera esta la vigilancia para que se alimenten, su agua su espacio limpio etc. Los pollos deben comer varias veces al día para que podamos asegurar su crecimiento más rápido.</p>
+  
+
+  
+   <div class="slider-container">
+  <button class="slider-btn prev" onclick="moverSlider(-1)">&#10094;</button>
+  <div class="slider">
+    <img src="images/ave de engorda6.webp" alt="Imagen 9" class="slide active"  width="600" y height="260">
+    <img src="images/ave de engorda5.webp" alt="Imagen 10 " class="slide"  width="600" y height="260">
+    <img src="images/ave de engorda7.webp" alt="Imagen 11 " class="slide"  width="600" y height="260">
+  </div>
+  <button class="slider-btn next" onclick="moverSlider(1)">&#10095;</button>
+</div>
+  <p>El crecimiento y la vena de aves de engorda especialmente los pollos involucra la cría y el engorde de los pollos hasta alcanzar el peso deseado para vender a los mercados, personas, pollerías etc. generalmente deben estar entre 1.8 kilos y los 2.5 kilos para que se puedan vender.</p>
+</main>
+
+ 
+  <footer>
+    <p>&copy; 2025 CBTA 186. Todos los derechos reservados. | Integrantes: Andrea Mayo, Alvin Pool, Erika Chale, David Tuz, Eliseo Noh</p>
+    <p>Docente: Ted Diego Tomas Canul</p>
+  </footer>
+
+  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll('.slider-container');
+
+  sliders.forEach((sliderContainer) => {
+    const slides = sliderContainer.querySelectorAll('.slider img');
+    let currentSlide = 0;
+
+    const prevBtn = sliderContainer.querySelector('.prev');
+    const nextBtn = sliderContainer.querySelector('.next');
+
+    function showSlide(n) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    // Inicializa el primer slide visible
+    showSlide(currentSlide);
+
+    // Botones manuales
+    prevBtn.addEventListener('click', () => {
+      showSlide(currentSlide - 1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      showSlide(currentSlide + 1);
+    });
+
+    // Autoplay cada 5 segundos
+    setInterval(() => {
+      showSlide(currentSlide + 1);
+    }, 5000);
+  });
+});
+</script>
+
+
+  
+
+
+</body>
+</html>

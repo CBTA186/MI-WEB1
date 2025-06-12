@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBTA186 - Proyectos Productivos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  
+  <header class="encabezado">
+  <div class="contenido-header">
+    <img src="images/banner.webp" alt="banner" class="banner" />
+  </div>
+</header>
+
+ 
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li>
+        <a href="#">Hortalizas</a>
+        <ul class="submenu">
+          <li><a href="pepino.html">Pepino</a></li>
+          <li><a href="calabaza.html">Calabaza</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Productos</a>
+        <ul class="submenu">
+          <li><a href="lacteos.html">Lácteos</a></li>
+          <li><a href="carnicos.html">Cárnicos</a></li>
+          <li><a href="Hortofruticolas.html">Hortofrutícolas</a></li>
+        </ul>
+      </li>
+      <li><a href="sandia.html">Cultivo sandía</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="aves.html">Aves de engorda.</a></li>
+    </ul>
+  </nav>
+
+  
+    <main class="contenido">
+   <div class="slider-container">
+  <button class="slider-btn prev" onclick="moverSlider(-1)">&#10094;</button>
+  <div class="slider">
+    <img src="images/banner 1.webp" alt="Imagen 1" alt="1" class="slide active"  width="600" y height="260">
+    <img src="images/banner 2.webp" alt="Imagen 2 " alt="2" class="slide"  width="600" y height="260">
+    <img src="images/banner 3.webp" alt="Imagen 3 " alt="3" class="slide"  width="600" y height="260">
+     <img src="images/banner 4.webp" alt="Imagen 3 " alt="4" class="slide"  width="600" y height="260">
+  </div>
+  <button class="slider-btn next" onclick="moverSlider(1)">&#10095;</button>
+</div>
+ 
+    <h2>¡Hola! Bienvenidos a nuestro sitio web creado por los alumnos:</h2>
+    <p>Andrea Abigail Noh Mayo, Erika Chale Tus, Alvin Manuel Pool García, Jesús Eliseo Noh Hoil, David Ricardo Tuz Hau. Somos alumnos de la carrera de Técnico en Ofimática del 6to semestre como parte del proyecto "Proyectos productivos de comercialización de productos agropecuarios" final del SM 5.1 "Gestiona información mediante plataformas digitales".</p>
+    <p>Conoce los diferentes proyectos productivos, así como los productos industrializados que se elaboran en el plantel educativo por alumnos de la Carrera de Técnicos Agropecuarios, como son productos lácteos, cárnicos y hortofrutícolas.</p>
+  </main>
+
+ 
+  <footer>
+    <p>&copy; 2025 CBTA 186. Todos los derechos reservados. | Integrantes: Andrea Mayo, Alvin Pool, Erika Chale, David Tuz, Eliseo Noh</p>
+    <p>Docente: Ted Diego Tomas Canul</p>
+  </footer>
+
+  
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 5000);
+  </script>
+
+</body>
+</html>
