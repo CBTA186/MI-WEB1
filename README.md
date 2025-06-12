@@ -6,5 +6,4 @@ Este repositorio contiene el código fuente y los recursos utilizados para desar
 
 El sitio tiene como objetivo principal visibilizar los trabajos académicos, productivos, científicos y tecnológicos desarrollados por los estudiantes y docentes del CBTA 186. Está diseñado para ser una plataforma informativa, educativa y promocional.
 
-##  Estructura del proyecto
 
